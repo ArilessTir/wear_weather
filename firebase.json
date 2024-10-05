@@ -1,0 +1,22 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "wear-weather-fr",
+          "appId": "1:973736404369:android:a5dd13cb43cc3e05bda630",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "wear-weather-fr",
+          "configurations": {
+            "android": "1:973736404369:android:a5dd13cb43cc3e05bda630",
+            "ios": "1:973736404369:ios:2b19f99a50df11b4bda630"
+          }
+        }
+      }
+    }
+  }
+}
