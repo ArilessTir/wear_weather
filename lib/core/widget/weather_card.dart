@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class WeatherCard extends StatelessWidget {
   const WeatherCard({super.key});
