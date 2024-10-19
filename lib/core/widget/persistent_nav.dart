@@ -4,19 +4,30 @@ import 'package:wear_weather/screens/home/home_page.dart';
 import 'package:wear_weather/screens/login/login_page.dart';
 import 'package:wear_weather/screens/look/look_page.dart';
 import 'package:wear_weather/screens/profile/profile_page.dart';
-import 'package:ionicons/ionicons.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
-class PersistentNav extends StatelessWidget {
+class PersistentNav extends StatefulWidget {
   const PersistentNav({super.key});
+
+  @override
+  _PersistentNavState createState() => _PersistentNavState();
+}
+
+class _PersistentNavState extends State<PersistentNav> {
+  // Set initialIndex to 1 to make HomePage the main page
+  final PersistentTabController _controller =
+      PersistentTabController(initialIndex: 1);
 
   List<PersistentTabConfig> _tabs() => [
         PersistentTabConfig(
           screen: const LoginPage(),
           item: ItemConfig(
             activeForegroundColor: Colors.black,
-            icon: const Icon(
-              PhosphorIconsBold.cloudSun,
+            inactiveBackgroundColor: Colors.white,
+            icon: Icon(
+              _controller.index == 0
+                  ? PhosphorIconsFill.cloudSun // Filled icon when active
+                  : PhosphorIconsBold.cloudSun, // Regular icon when inactive
             ),
             title: "Meteo",
           ),
@@ -25,8 +36,11 @@ class PersistentNav extends StatelessWidget {
           screen: HomePage(),
           item: ItemConfig(
             activeForegroundColor: Colors.black,
-            icon: const Icon(
-              PhosphorIconsBold.sparkle,
+            inactiveBackgroundColor: Colors.white,
+            icon: Icon(
+              _controller.index == 1
+                  ? PhosphorIconsFill.sparkle
+                  : PhosphorIconsBold.sparkle,
             ),
             title: "Accueil",
           ),
@@ -35,7 +49,7 @@ class PersistentNav extends StatelessWidget {
           screen: const LookPage(),
           item: ItemConfig(
             activeForegroundColor: Colors.black,
-            icon: const ImageIcon(
+            icon: ImageIcon(
               size: 25,
               AssetImage(
                 "assets/icons/nav_tab.png",
@@ -47,8 +61,10 @@ class PersistentNav extends StatelessWidget {
         PersistentTabConfig(
           screen: const ProfilePage(),
           item: ItemConfig(
-            icon: const Icon(
-              PhosphorIconsBold.userCircle,
+            icon: Icon(
+              _controller.index == 3
+                  ? PhosphorIconsFill.userCircle
+                  : PhosphorIconsBold.userCircle,
             ),
             activeForegroundColor: Colors.black,
             title: "Profil",
@@ -58,6 +74,7 @@ class PersistentNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => PersistentTabView(
+        controller: _controller,
         tabs: _tabs(),
         navBarBuilder: (navBarConfig) => Style1BottomNavBar(
           navBarConfig: navBarConfig,
