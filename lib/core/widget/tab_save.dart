@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 
 class TabModalPage extends StatefulWidget {
   const TabModalPage({super.key});
@@ -126,9 +127,7 @@ class _TabModalPageState extends State<TabModalPage> {
                     width: 120,
                     height: 160,
                   ),
-                  SizedBox(
-                    width: 10,
-                  ),
+                  const SizedBox(width: 10),
                   const Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment
@@ -163,67 +162,22 @@ class _TabModalPageState extends State<TabModalPage> {
                   ),
                 ],
               ),
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Divider(color: Color.fromARGB(41, 0, 0, 0)),
-              ),
+              const SizedBox(height: 10),
               const Text("Selectionne les tags associés au tableau"),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: Container(
-                  height: 40,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('Ensoleillé'),
-                        style: TextButton.styleFrom(
-                          foregroundColor: Colors.white,
-                          backgroundColor: Colors.black,
-                        ),
-                      ),
-                      SizedBox(width: 10),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('Chaud'),
-                        style: TextButton.styleFrom(
-                          foregroundColor: Colors.white,
-                          backgroundColor: Colors.black,
-                        ),
-                      ),
-                      SizedBox(width: 10),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('Vacance'),
-                        style: TextButton.styleFrom(
-                          foregroundColor: Colors.black,
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                      SizedBox(width: 10),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('Jour'),
-                        style: TextButton.styleFrom(
-                          foregroundColor: Colors.black,
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                      SizedBox(width: 10),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('Nuit'),
-                        style: TextButton.styleFrom(
-                          foregroundColor: Colors.black,
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                      SizedBox(width: 10),
-                    ],
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  FilledButton.icon(
+                    style: FilledButton.styleFrom(
+                      foregroundColor: Colors.black,
+                      backgroundColor: const Color.fromRGBO(242, 136, 207, 1),
+                    ),
+                    onPressed: () {},
+                    icon: const Icon(PhosphorIconsBold.plusCircle),
+                    label: const Text('Ajouter'),
                   ),
-                ),
-              ),
+                ],
+              )
             ],
           ),
         ),
