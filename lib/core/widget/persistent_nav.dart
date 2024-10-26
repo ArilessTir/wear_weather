@@ -108,7 +108,7 @@ class _PersistentNavState extends State<PersistentNav> {
             inactiveBackgroundColor: Colors.white,
             icon: Icon(
               _controller.index == 0
-                  ? PhosphorIconsFill.house
+                  ? PhosphorIconsBold.house
                   : PhosphorIconsBold.house,
             ),
             title: "Accueil",
@@ -121,8 +121,8 @@ class _PersistentNavState extends State<PersistentNav> {
             inactiveBackgroundColor: Colors.white,
             icon: Icon(
               _controller.index == 1
-                  ? PhosphorIconsFill.cloudSun // Filled icon when active
-                  : PhosphorIconsBold.cloudSun, // Regular icon when inactive
+                  ? PhosphorIconsFill.sun // Filled icon when active
+                  : PhosphorIconsBold.sun, // Regular icon when inactive
             ),
             title: "Meteo",
           ),
@@ -176,6 +176,6 @@ class _PersistentNavState extends State<PersistentNav> {
           navBarConfig: navBarConfig,
           navBarDecoration: const NavBarDecoration(color: Colors.transparent),
         ),
-        navBarOverlap: const NavBarOverlap.full(),
+        navBarOverlap: const NavBarOverlap.none(),
       );
 }
