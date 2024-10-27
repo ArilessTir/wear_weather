@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Tag extends StatelessWidget {
+class TagWidget extends StatelessWidget {
   final String text;
-  const Tag({
+  final Color color;
+  const TagWidget({
     super.key,
     required this.text,
+    required this.color,
   });
 
   @override
@@ -12,7 +14,7 @@ class Tag extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.7),
+        color: color,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Text(

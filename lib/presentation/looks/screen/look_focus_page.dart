@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
-import 'package:wear_weather/core/widget/tab_save.dart';
-
-import '../../core/widget/tag.dart';
+import 'package:wear_weather/presentation/common/tab_save.dart';
+import 'package:wear_weather/presentation/common/tag.dart';
 
 class LookFocusPage extends StatelessWidget {
   const LookFocusPage({super.key});
@@ -77,13 +76,13 @@ class LookFocusPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Positioned(
+                Positioned(
                   bottom: 10,
                   left: 16,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Name',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -91,7 +90,7 @@ class LookFocusPage extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      Text(
+                      const Text(
                         '@username',
                         style: TextStyle(
                           fontSize: 16,
@@ -101,11 +100,17 @@ class LookFocusPage extends StatelessWidget {
                       SizedBox(height: 10),
                       Row(
                         children: [
-                          Tag(text: 'Ensoleillé'),
+                          TagWidget(
+                              text: 'Ensoleillé',
+                              color: Colors.white.withOpacity(0.7)),
                           SizedBox(width: 8),
-                          Tag(text: 'Chaud'),
+                          TagWidget(
+                              text: 'Chaud',
+                              color: Colors.white.withOpacity(0.7)),
                           SizedBox(width: 8),
-                          Tag(text: 'Ville'),
+                          TagWidget(
+                              text: 'Ville',
+                              color: Colors.white.withOpacity(0.7)),
                         ],
                       ),
                     ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wear_weather/core/widget/persistent_nav.dart';
+import 'package:wear_weather/core/themes/app_theme.dart';
+import 'package:wear_weather/presentation/common/persistent_navbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: const Color.fromRGBO(249, 245, 242, 1),
-        useMaterial3: true,
-      ),
-      home: const PersistentNav(),
+      title: 'Wear Weather',
+      theme: appTheme(),
+      home: const PersistentNavbar(),
     );
   }
 }

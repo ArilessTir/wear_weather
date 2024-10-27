@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
-import 'package:wear_weather/screens/home/home_page.dart';
-import 'package:wear_weather/screens/login/login_page.dart';
-import 'package:wear_weather/screens/look/look_page.dart';
-import 'package:wear_weather/screens/profile/profile_page.dart';
+import 'package:wear_weather/presentation/home/screen/home_page.dart';
+import 'package:wear_weather/presentation/login/screen/login_page.dart';
+import 'package:wear_weather/presentation/looks/screen/look_page.dart';
+import 'package:wear_weather/presentation/profil/screen/profile_page.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
-class PersistentNav extends StatefulWidget {
-  const PersistentNav({super.key});
+class PersistentNavbar extends StatefulWidget {
+  const PersistentNavbar({super.key});
 
   @override
-  _PersistentNavState createState() => _PersistentNavState();
+  _PersistentNavbarState createState() => _PersistentNavbarState();
 }
 
-class _PersistentNavState extends State<PersistentNav> {
+class _PersistentNavbarState extends State<PersistentNavbar> {
   // Set initialIndex to 1 to make HomePage the main page
   final PersistentTabController _controller =
       PersistentTabController(initialIndex: 0);

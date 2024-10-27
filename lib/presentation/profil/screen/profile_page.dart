@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wear_weather/screens/look_focus/look_focus_page.dart';
+import 'package:wear_weather/presentation/looks/screen/look_focus_page.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
