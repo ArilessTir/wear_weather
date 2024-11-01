@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wear_weather/core/widget/generic_card.dart';
-import 'package:wear_weather/core/widget/tedency_card.dart';
-import 'package:wear_weather/core/widget/weather_card.dart';
+import 'package:wear_weather/presentation/home/widget/generic_card.dart';
+import 'package:wear_weather/presentation/home/widget/tedency_card.dart';
+import 'package:wear_weather/presentation/home/widget/weather_card.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});

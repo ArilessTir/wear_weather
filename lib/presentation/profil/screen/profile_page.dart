@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wear_weather/presentation/looks/screen/look_focus_page.dart';
+import '../../common/look_card.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -70,16 +72,11 @@ class ProfilePage extends StatelessWidget {
                       ),
                       itemCount: 7,
                       itemBuilder: (context, index) {
-                        return Container(
-                          width: 164,
-                          height: 220,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: const DecorationImage(
-                              image: AssetImage('assets/images/style2.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
+                        return const ArrayCard(
+                          isLocked: true,
+                          items: 12,
+                          title: 'Title',
+                          destinationPage: LookFocusPage(),
                         );
                       },
                     ),
@@ -93,17 +90,11 @@ class ProfilePage extends StatelessWidget {
                       ),
                       itemCount: 3,
                       itemBuilder: (context, index) {
-                        return Container(
-                          width: 164,
-                          height: 220,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: const DecorationImage(
-                              image: AssetImage('assets/images/style1.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        );
+                        return const LinkCard(
+                            // isLocked: true,
+                            // items: 12,
+                            // title: 'Title',
+                            destinationPage: LookFocusPage());
                       },
                     ),
                   ],
