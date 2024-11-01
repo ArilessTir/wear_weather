@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:wear_weather/presentation/common/look_card.dart';
 import 'package:wear_weather/presentation/looks/screen/look_focus_page.dart';
 import 'package:wear_weather/presentation/looks/widget/weather_card_look.dart';
 
@@ -78,27 +79,7 @@ class LookPage extends StatelessWidget {
                 ),
                 itemCount: 7,
                 itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const LookFocusPage(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      width: 164,
-                      height: 220,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/images/style2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  );
+                  return const LookCard(destinationPage: LookFocusPage());
                 },
               ),
             ],
