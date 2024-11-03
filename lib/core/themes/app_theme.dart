@@ -21,5 +21,23 @@ ThemeData appTheme() {
         bodyMedium: TextStyle(color: Colors.black87),
         bodySmall: TextStyle(color: Colors.black87),
       ),
+      inputDecorationTheme: InputDecorationTheme(
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.0),
+          borderSide: const BorderSide(color: Colors.black, width: 2.0),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.0),
+          borderSide: const BorderSide(color: Colors.grey, width: 1.0),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.0),
+          borderSide: const BorderSide(
+              color: Color.fromRGBO(192, 15, 12, 1), width: 1.0),
+        ),
+      ),
+      textSelectionTheme: const TextSelectionThemeData(
+        cursorColor: Colors.black,
+      ),
       useMaterial3: true);
 }

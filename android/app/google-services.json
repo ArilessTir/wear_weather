@@ -2,7 +2,7 @@
   "project_info": {
     "project_number": "973736404369",
     "project_id": "wear-weather-fr",
-    "storage_bucket": "wear-weather-fr.appspot.com"
+    "storage_bucket": "wear-weather-fr.firebasestorage.app"
   },
   "client": [
     {
@@ -12,7 +12,20 @@
           "package_name": "com.wearweatherfr.app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "973736404369-1b84vo4p1t3gae4q9jroortouk7nijck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wearweatherfr.app",
+            "certificate_hash": "560f18e4033994cbe805c53c82c3b70549e8e2f3"
+          }
+        },
+        {
+          "client_id": "973736404369-9h0lkrjj9ran1cq4jgm10pkjnmu3hfo5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDjlL-RJmNLMgG1OHbPP6SFzg-EQxOClIk"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973736404369-9h0lkrjj9ran1cq4jgm10pkjnmu3hfo5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "973736404369-5patalavhk04jntp2ra5atc7tajah16l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.wearWeather"
+              }
+            }
+          ]
         }
       }
     }
