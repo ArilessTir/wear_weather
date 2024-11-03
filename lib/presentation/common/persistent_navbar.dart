@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
+import 'package:wear_weather/presentation/auth/screen/Intro_page.dart';
 import 'package:wear_weather/presentation/home/screen/home_page.dart';
-import 'package:wear_weather/presentation/login/screen/login_page.dart';
 import 'package:wear_weather/presentation/looks/screen/look_page.dart';
 import 'package:wear_weather/presentation/profil/screen/profile_page.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
@@ -44,7 +44,7 @@ class _PersistentNavbarState extends State<PersistentNavbar> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const LoginPage(),
+                        builder: (context) => const IntroPage(),
                       ),
                     );
                   },
@@ -70,7 +70,7 @@ class _PersistentNavbarState extends State<PersistentNavbar> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const LoginPage(),
+                        builder: (context) => const IntroPage(),
                       ),
                     );
                   },
@@ -115,7 +115,7 @@ class _PersistentNavbarState extends State<PersistentNavbar> {
           ),
         ),
         PersistentTabConfig(
-          screen: const LoginPage(),
+          screen: const IntroPage(),
           item: ItemConfig(
             activeForegroundColor: Colors.black,
             inactiveBackgroundColor: Colors.white,

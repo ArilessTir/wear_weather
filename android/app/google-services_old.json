@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "973736404369",
+    "project_id": "wear-weather-fr",
+    "storage_bucket": "wear-weather-fr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973736404369:android:a5dd13cb43cc3e05bda630",
+        "android_client_info": {
+          "package_name": "com.wearweatherfr.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjlL-RJmNLMgG1OHbPP6SFzg-EQxOClIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
